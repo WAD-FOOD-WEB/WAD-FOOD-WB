@@ -103,13 +103,15 @@
         }
 
         function checkout() {
-            if (localStorage.getItem('cart')) {
+            const confirmation = confirm("Are you sure you want to proceed with the checkout? Click 'OK' to proceed, or 'Cancel' to keep shopping.");
+            
+            if (confirmation) {
                 alert("Proceeding to checkout!");
-                // Clear the cart after checkout (optional)
+                // Clear the cart after checkout
                 localStorage.removeItem('cart');
-                renderCart();
+                renderCart(); // Clear the cart display after checkout
             } else {
-                alert("Your cart is empty!");
+                alert("Checkout canceled. You can continue shopping.");
             }
         }
 
