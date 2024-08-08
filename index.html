@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FOODIES WEB</title>
 <link rel="stylesheet" href="style.css">
-    <img src="a1.jpg">
-
+<img src="a1.jpg">
 
 
 </head>
@@ -24,10 +23,10 @@
 
 
 
-<h1> FOOD WB</h1>
+
            <h2><a style="float: left; margin-left: 70px;" title="Snacks Menu" href="Snack.html">Snack Menu</a></h2> 
             <h2><a style="float: left; margin-left: 70px;" title="Soups Menu" href="Soup.html">Soups Menu</a></h2>
-            <p><h2><a style="float: left; margin-left: 70px;" title="Contact me" href="Contact me.html">Contact Me</a></h2><br>
+            <p><h2><a style="float: left; margin-left: 70px;" title="Contact me" href="Cart.html">Contact Me</a></h2><br>
             </br>
             </p>
 
@@ -54,41 +53,62 @@
 
 <!--to do:Chin Chin, check
 c-->
+
+
+
+
+
+
+
+
+<div class="product" data-id="1" data-name="Buns" data-price="150">
+    
+<p><h2 style="color: #007bff">Buns </p></h2>
+<p><h2 style="color: #007bff"> Price: $150
+    <button onclick="addToCart(this)">Add to cart?</button>
+    
+    
+</h2></p></li></p></div>
+
+
+
 <h1 style="color: maroon; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><u>TRENDING NOW!!!</h1></u>
 <p><li style="float: left; margin-right: 20px; padding-bottom: 20px black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-    <a href="Buns.html" target="blank" ><img src="a.jpg" width="350" height="300"></a> 
-<p><h2 style="color: #007bff">Buns </p></h2>
-<p><h2 style="color: #007bff"> ₦150.00 
-    <h1><a style="color: #007bff" target="blank"  href="Buns.html">Details</a></h1>
-</h2></p></li></p>
-
+    <div class="product" data-id="1" data-name="Buns" data-price="10">
+        <a href="Buns.html" target="blank" ><img src="a.jpg" width="350" height="300"></a> 
+        <h3>Buns</h3>
+        <p>Price: $10</p>
+        <button onclick="addToCart(this)">Add to Cart</button>
+        <h1><a style="color: #007bff" target="blank"  href="Buns.html">Details</a>
+    </div></li></p>
+<div class="product" data-id="2" data-name="Cakes" data-price="2050">
 <p><li style="float: left; margin-right: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
     <a target="blank"  href="Cakes.html"><img src="b.jpg" width="350" height="300"></a> 
 <p><h2 style="color: #007bff">Cakes </p></h2>
-<p><h2 style="color: #007bff"> ₦2,050.00 
+<p><h2 style="color: #007bff">Price: $2,050 
     <h1><a style="color: #007bff" target="blank"  href="Cakes.html">Details</a></h1>
-</h2></p></li></p>
-
+</h2></p></li></p></div>
+<div class="product" data-id="3" data-name="Cookies" data-price="1000">
 <p><li style="float: left; margin-right: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
     <a target="blank"  href="Cookies.html"><img src="Cookies.png" width="350" height="300"></a>
     <p><h2 style="color: #007bff">Cookies </p></h2>
     <p><h2 style="color: #007bff"> ₦1,000.00 
         <h1><a style="color: #007bff" target="blank"  href="Cookies.html">Details</a></h1>
-    </h2></p></li></p>
-
+    </h2></p></li></p></div>
+    <div class="product" data-id="4" data-name="Meatpie" data-price="6000">
     <p><li style="float: left; margin-right: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
         <a target="blank"  href="Meatpie.html"><img src="e.jpg" width="350" height="300"></a>
         <p><h2 style="color: #007bff">Meatpie </p></h2>
         <p><h2 style="color: #007bff"> ₦6,000.00 
             <h1><a style="color: #007bff" target="blank"  href="Meatpie.html">Details</a></h1>
-        </h2></p></li></p>
-
+        </h2></p></li></p></div>
+        <div class="product" data-id="4" data-name="FRESHLY BAKED DOUGHNUTS" data-price="950">
         <p><li style="float: left; margin-right: 20px; color: #007bff; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
             <a target="blank"  href="Doughnut.html"><img src="dougnut.png" width="350" height="300"></a>
             <p><h2 style="color: #007bff"> FRESHLY BAKED DOUGHNUTS </p></h2>
             <p><h2 style="color: #007bff"> ₦950.00 
                 <h1><a style="color: #007bff" target="blank"  href="Doughnut.html">DETAILS</a></h1>
-            </h2></p></li></p>
+            </h2></p></li></p></div>
 
             <p><li style="float: left; margin-right: 20px; color: #007bff; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >
                 <a target="blank"  href="AfangSoup.html"><img src="Afang soup.png" width="350" height="300"></a>
@@ -103,6 +123,10 @@ c-->
                     <p><h2 style="color: #007bff"> ₦500.00 
                         <h1><a style="color: #007bff;" target="blank"  href="ChinChin.html">DETAILS</a></h1>
                     </h2></p></li></p>
+
+
+                    
+                    <button onclick="goToCart()">Go to cart</button>
 
 <script src="main.js"></script>
 
