@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOODIES WEB</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="a.jpg">
+<img src="a1.jpg">
+
+
+</head>
+
+
+<body align="center" text="blue" style="background-color: bisque;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="cart">
+    <h3>Your Cart</h3>
+    <ul id="cart-items">
+        <!-- Cart items will be added here -->
+    </ul>
+    <p id="total-price">Total: $0</p>
+    <button onclick="checkout()">Checkout</button>
+</div>
+<script>
+     function renderCart() {
+            const cartItemsElement = document.getElementById('cart-items');
+            const totalPriceElement = document.getElementById('total-price');
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            cartItemsElement.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price * item.quantity;
+
+                // Create a select element for quantity
+                const quantitySelect = document.createElement('select');
+                quantitySelect.className = 'quantity-select';
+                for (let i = 1; i <= item.quantity; i++) {
+                    const option = document.createElement('option');
+                    option.value = i;
+                    option.text = i;
+                    quantitySelect.appendChild(option);
+                }
+
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    ${item.name} x ${item.quantity} - $${item.price * item.quantity}
+                `;
+                li.appendChild(quantitySelect);
+
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'remove-btn';
+                removeBtn.textContent = 'Remove';
+                removeBtn.onclick = () => removeFromCart(index, parseInt(quantitySelect.value));
+                li.appendChild(removeBtn);
+
+                cartItemsElement.appendChild(li);
+            });
+
+            totalPriceElement.textContent = `Total: $${total.toFixed(2)}`;
+        }
+
+        function removeFromCart(index, quantityToRemove) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            if (cart[index].quantity <= quantityToRemove) {
+                // Remove the item entirely if the quantity to remove is greater than or equal to the current quantity
+                cart.splice(index, 1);
+            } else {
+                // Otherwise, just reduce the quantity
+                cart[index].quantity -= quantityToRemove;
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart(); // Re-render the cart after removal
+        }
+
+        function checkout() {
+            if (localStorage.getItem('cart')) {
+                alert("Proceeding to checkout!");
+                // Clear the cart after checkout (optional)
+                localStorage.removeItem('cart');
+                renderCart();
+            } else {
+                alert("Your cart is empty!");
+            }
+        }
+
+        // Render the cart on page load
+        window.onload = renderCart;
+</script>
+</body></html>
