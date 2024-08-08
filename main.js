@@ -37,5 +37,5 @@ function addToCart(element) {
 }
 
 function goToCart() {
-    window.location.href = 'cart.html';
+    window.location.href = 'Cart.html';
 }
