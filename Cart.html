@@ -52,6 +52,7 @@
             const cartItemsElement = document.getElementById('cart-items');
             const totalPriceElement = document.getElementById('total-price');
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
 
             cartItemsElement.innerHTML = '';
             let total = 0;
@@ -59,7 +60,7 @@
             cart.forEach((item, index) => {
                 total += item.price * item.quantity;
 
-                // Create a select element for quantity
+                
                 const quantitySelect = document.createElement('select');
                 quantitySelect.className = 'quantity-select';
                 for (let i = 1; i <= item.quantity; i++) {
@@ -71,7 +72,7 @@
 
                 const li = document.createElement('li');
                 li.innerHTML = `
-                    ${item.name} x ${item.quantity} - $${item.price * item.quantity}
+                    ${item.name} x ${item.quantity} - ₦${item.price * item.quantity}
                 `;
                 li.appendChild(quantitySelect);
 
@@ -83,43 +84,48 @@
 
                 cartItemsElement.appendChild(li);
             });
+            
 
-            totalPriceElement.textContent = `Total: $${total.toFixed(2)}`;
+            totalPriceElement.textContent = `Total: ₦${total.toFixed(2)}`;
         }
 
         function removeFromCart(index, quantityToRemove) {
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
             if (cart[index].quantity <= quantityToRemove) {
-                // Remove the item entirely if the quantity to remove is greater than or equal to the current quantity
+                
                 cart.splice(index, 1);
             } else {
-                // Otherwise, just reduce the quantity
+                
                 cart[index].quantity -= quantityToRemove;
             }
-
+            
             localStorage.setItem('cart', JSON.stringify(cart));
-            renderCart(); // Re-render the cart after removal
+            renderCart();
         }
 
         function checkout() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (cart.length === 0) {
+                alert("You don't have any item in your cart. Browse and add items to your cart to checkout.");
+                window.location.href = "index.html"
+                return; 
+                
+            }
+
             const confirmation = confirm("Are you sure you want to proceed with the checkout? Click 'OK' to proceed, or 'Cancel' to keep shopping.");
             
             if (confirmation) {
                 alert("Proceeding to checkout!");
-                // Clear the cart after checkout
-                localStorage.removeItem('cart');
-                renderCart(); // Clear the cart display after checkout
+                window.location.href = "note.html"; 
+                renderCart(); 
             } else {
                 alert("Checkout canceled. You can continue shopping.");
             }
-             // Redirect to a new page
-                window.location.href = "Checkout.html"; // Replace with the path to your checkout page
+            
+             
+              
         }
-
-        // Render the cart on page load
         window.onload = renderCart;
-   
-           
 </script>
 </body></html>
