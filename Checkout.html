@@ -31,6 +31,15 @@
 
     // Retrieve cart data from local storage
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let itemsList = '';
+
+
+
+    cart.forEach(item => {
+        itemsList += `${item.name} x ${item.quantity} - ₦${item.price * item.quantity}` ;
+    });
+
+    let total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
     // Function to calculate total price
     function getTotalPrice(cart) {
@@ -51,8 +60,9 @@
     // Prepare template parameters
     let templateParams = {
         to_email: document.getElementById('user-email').value,
+        order_details: itemsList,
         total_price: totalPrice,
-        items: cart
+        
     };
 
     // Send email using EmailJS
@@ -66,6 +76,7 @@
             // Redirect to thank you page or show confirmation
             window.location.href = 'Thanks.html';
         }, function(error) {
+            window.location.href = 'Error.html';
             console.log('FAILED...', error);
         });
 });

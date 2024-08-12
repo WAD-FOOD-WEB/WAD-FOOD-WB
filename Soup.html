@@ -11,12 +11,12 @@
 <h1> SOUP WEB </h1>
 
 
-           <h2><a title="Snacks Menu" href="Snack.html">Snack Menu</a></h2> 
-            <h2><a title="Home" href="index.html">index.html</a></h2>
-            <h2><a title="Contact me" href="Contact me.html">Contact Me</a></h2>
-        </div> 
-    </div>
-    </div>
+<div class="header-buttons">
+    <h2><a href="Snack.html">Snack Menu</a></h2>
+    <h2> <a href="Soup.html">Soups Menu</a></h2>
+   <h2> <a href="Contact me.html">Contact Me</a></h2>
+  <button class="go-to-cart" onclick="goToCart()">Go to Cart</button>  
+</div> 
 
 
 
@@ -26,55 +26,69 @@
 
 
 
-<p><li style="float: left; margin-right: 20px;">
+<p><li style="float: left; margin-right: 20px;"></p>
+    <div class="product" data-id="11" data-name="Okro-Soup" data-price="1500">
     <a href="Okro.html"><img src="okro in soup.png" width="350" height="300"></a> 
 <p><h2 style="color: #007bff">Okro Soup </p></h2>
-<p><h2 style="color: #007bff"> ₦1,500.00 
+<p><h2 style="color: #007bff"> ₦1,500.00 </h2></p>
+<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
     <h1 style="color: #007bff"><a style="color: #007bff" href="Okro.html">Details</a></h1>
-</h2></p></li></p>
+</li></div>
 
-<p><li style="float: left; margin-right: 20px;">
+<p><li style="float: left; margin-right: 20px;"></p>
+    <div class="product" data-id="12" data-name="Egusi-Soup" data-price="960">
     <a href="Egusi.html"><img src="egusi1.png" width="350" height="300"></a> 
 <p><h2 style="color: #007bff">Egusi Soup</p></h2>
-<p><h2 style="color: #007bff"> ₦960.00 
-    <h1 style="color: #007bff"><a style="color: #007bff" href="Buns.html">Details</a></h1>
-</h2></p></li></p>
+<p><h2 style="color: #007bff"> ₦960.00 </h2></p>
+<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <h1 style="color: #007bff"><a style="color: #007bff" href="Egusi.html">Details</a></h1>
+</li></div>
 
-<p><li style="float: left; margin-right: 20px;">
+<p><li style="float: left; margin-right: 20px;"></p>
+    <div class="product" data-id="13" data-name="Afang-Soup" data-price="1000">
     <a href="AfangSoup.html"><img src="Afang soup.png" width="350" height="300"></a> 
 <p><h2 style="color: #007bff">Afang Soup </p></h2>
-<p><h2 style="color: #007bff"> ₦1,000.00 
-    <h1 style="color: #007bff"><a style="color: #007bff" href="AfangSoup.htmls">Details</a></h1>
-</h2></p></li></p>
+<p><h2 style="color: #007bff"> ₦1,000.00 </h2></p>
+<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <h1 style="color: #007bff"><a style="color: #007bff" href="AfangSoup.html">Details</a></h1>
+</li></div>
 
-<p><li style="float: left; margin-right: 20px;">
+<p><li style="float: left; margin-right: 20px;"></p>
+    <div class="product" data-id="14" data-name="Ogbonno-Soup" data-price="2000">
     <a href="Ogbonno.html"><img src="Ogbonno soup.png" width="350" height="300"></a> 
 <p><h2 style="color: #007bff">Ogbonno Soup </p></h2>
-<p><h2 style="color: #007bff"> ₦5,000.00 
+<p><h2 style="color: #007bff"> ₦2,000.00 </h2></p>
+<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
     <h1 style="color: #007bff"><a style="color: #007bff" href="Ogbonno.html">Details</a></h1>
-</h2></p></li></p>
+</li></div>
 
 
-<p><li style="float: left; margin-right: 20px;">
-    <a href="Buns.html"><img src="White soup.png" width="350" height="300"></a> 
+<p><li style="float: left; margin-right: 20px;"></p>
+    <div class="product" data-id="15" data-name="White-Soup" data-price="1500">
+    <a href="WhiteSoup.html"><img src="White soup.png" width="350" height="300"></a> 
 <p><h2 style="color: #007bff">White Soup </p></h2>
-<p><h2 style="color: #007bff"> ₦1,500.00 
-    <h1 style="color: #007bff"><a style="color: #007bff" href="Buns.html">Details</a></h1>
-</h2></p></li></p>
+<p><h2 style="color: #007bff"> ₦1,500.00 </h2></p>
+<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <h1 style="color: #007bff"><a style="color: #007bff" href="WhiteSoup.html">Details</a></h1>
+</li></div>
 
-<p><li style="float: left; margin-right: 20px;">
+<p><li style="float: left; margin-right: 20px;"></p>
+    <div class="product" data-id="16" data-name="BitterLeaf-Soup" data-price="1500">
     <a href="BitterLeaf.html"><img src="Bitter leaf.png" width="350" height="300"></a> 
 <p><h2 style="color: #007bff">Bitter Leaf Soup </p></h2>
-<p><h2 style="color: #007bff"> ₦1,050.00 
-    <h1 style="color: #007bff"><a style="color: #007bff" href="Buns.html">Details</a></h1>
-</h2></p></li></p>
+<p><h2 style="color: #007bff"> ₦1,500.00 </h2></p>
+<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <h1 style="color: #007bff"><a style="color: #007bff" href="BitterLeaf.html">Details</a></h1>
+</li></div>
 
-<p><li style="float: left; margin-right: 20px;">
-    <a href="Buns.html"><img src="Vegetable soup.png" width="350" height="300"></a> 
+<p><li style="float: left; margin-right: 20px;"></p>
+    <div class="product" data-id="17" data-name="Vegetable-Soup" data-price="1000">
+    <a href="Vegetable.html"><img src="Vegetable soup.png" width="350" height="300"></a> 
 <p><h2 style="color: #007bff">Vegetable Soup </p></h2>
-<p><h2 style="color: #007bff"> ₦1,000.00 
-    <h1 style="color: #007bff"><a style="color: #007bff" href="Buns.html">Details</a></h1>
-</h2></p></li></p>
+<p><h2 style="color: #007bff"> ₦1,000.00 </h2></p>
+<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <h1 style="color: #007bff"><a style="color: #007bff" href="Vegetable.html">Details</a></h1>
+</li></div>
 
 
 
@@ -101,6 +115,6 @@
 
 
 <script src="main.js"></script>
-<marquee><h2>This site is built by master OBI ANI DAVID.The master of this website at just 13 years old. All rights reserved</marquee>
-</body><h2>
-    </h2></body>
+
+</body>
+    

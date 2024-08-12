@@ -46,6 +46,7 @@
     </ul>
     <p id="total-price">Total: $0</p>
     <button onclick="checkout()">Checkout</button>
+    <button onclick="clearCart()">Clear your Cart</button>
 </div>
 <script>
      function renderCart() {
@@ -88,6 +89,22 @@
 
             totalPriceElement.textContent = `Total: ₦${total.toFixed(2)}`;
         }
+
+        function clearCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    // Clear the cart data from localStorage
+    if (cart.length === 0){
+        alert("You don't have any item in your cart. Browse and add items to your cart to checkout.");
+                window.location.href = "index.html"
+                return; 
+    }
+    localStorage.removeItem('cart');
+    
+    // Re-render the cart to show it's empty
+    renderCart();
+    
+    alert("All items have been removed from your cart.");
+}
 
         function removeFromCart(index, quantityToRemove) {
             let cart = JSON.parse(localStorage.getItem('cart')) || [];

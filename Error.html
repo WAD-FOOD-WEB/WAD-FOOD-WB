@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You for Your Purchase!</title>
+    <title>There is an Error</title>
     <style>
         body {
             text-align: center;
@@ -14,15 +14,15 @@
 </head>
 <body>
 
-    <h1>Thank You for Your Purchase!</h1>
-    <p>Your order has been placed successfully.</p>
-    <p>You will receive a confirmation email shortly.</p>
+    <h1>An error has occured, </h1>
+    <p>Please check your internet connection</p>
+    
 
-    <button onclick="goBack()">Continue Shopping</button>
+    <button onclick="tryAgain()">Try Again</button>
 
     <script>
-        function goBack() {
-            window.location.href = "index.html"; // Redirect back to the product page
+        function tryAgain() {
+            window.location.href = "Checkout.html"; // Redirect back to the product page
         }
     </script>
 
