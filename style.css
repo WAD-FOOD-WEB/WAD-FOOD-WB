@@ -4,6 +4,12 @@ body {
 
 }
 
+@media (max-width: 600px) {
+    .go-to-cart {
+        text-align: center;
+        margin: 10px auto;
+    }
+}
 
 
 
