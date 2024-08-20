@@ -39,3 +39,16 @@ function addToCart(element) {
 function goToCart() {
     window.location.href = 'Cart.html';
 }
+function goToSnack() {
+    window.location.href = 'Snack.html';
+}
+function goToSoup() {
+    window.location.href = 'Soup.html';
+}
+
+function goToContact(){
+    window.location.href = 'Contact me.html';
+}
+function goHome(){
+    window.location.href = 'index.html';
+}
