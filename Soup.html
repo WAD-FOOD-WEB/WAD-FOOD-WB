@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FOODIES WEB</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="text-align: center; background-color: bisque; color: #007bff;">
+<body translate="yes" style="text-align: center; background-color: bisque; color: #007bff;">
 
-<img src="Soup1.png">                                 
+                             
 <h1> SOUP WEB </h1>
 
 
 <div class="header-buttons">
-    <h2><a href="Snack.html">Snack Menu</a></h2>
-    <h2> <a href="Soup.html">Soups Menu</a></h2>
-   <h2> <a href="Contact me.html">Contact Me</a></h2>
-  <button class="go-to-cart" onclick="goToCart()">Go to Cart</button>  
-</div> 
+        
+    <fieldset>
+        <legend></legend>
+        
+        <img style="float: left; margin-right: 10px; margin-bottom: 0px;" class="logo-image" src="logo.png"alt="food image" width="200" >
+        <h2><button style="float: left" class="header-button" onclick="goToSnack()">Snack Menu</button></h2>
+        <h2> <button style="float: left;" class="header-button" onclick="goHome()">Home</button></h2>
+       <h2> <button style="float: left" class="header-button" onclick="goToContact()" href="Contact me.html">Contact Me</button></h2>
+      <button class="go-to-cart" onclick="goToCart()">Go to Cart</button>  
+    </div>
+    
+</fieldset>
 
 
 
@@ -32,7 +42,11 @@
 <p><h2 style="color: #007bff">Okro Soup </p></h2>
 <p><h2 style="color: #007bff"> ₦1,500.00 </h2></p>
 <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-    <h1 style="color: #007bff"><a style="color: #007bff" href="Okro.html">Details</a></h1>
+    <h1 style="color: #007bff"><button class="add-to-cart" onclick="goToOkro()"><script>
+    function goToOkro(){
+        window.location.href= 'Okro.html'
+    }
+</script></button>Details</h1>
 </li></div>
 
 <p><li style="float: left; margin-right: 20px;"></p>
@@ -41,7 +55,11 @@
 <p><h2 style="color: #007bff">Egusi Soup</p></h2>
 <p><h2 style="color: #007bff"> ₦960.00 </h2></p>
 <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-    <h1 style="color: #007bff"><a style="color: #007bff" href="Egusi.html">Details</a></h1>
+    <h1 style="color: #007bff"><button class="add-to-cart" onclick="goToEgusi()"><script>
+    function goToEgusi(){
+        window.location.href= 'Egusi.html'
+    }
+</script></button>Details</h1>
 </li></div>
 
 <p><li style="float: left; margin-right: 20px;"></p>
@@ -50,7 +68,11 @@
 <p><h2 style="color: #007bff">Afang Soup </p></h2>
 <p><h2 style="color: #007bff"> ₦1,000.00 </h2></p>
 <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-    <h1 style="color: #007bff"><a style="color: #007bff" href="AfangSoup.html">Details</a></h1>
+    <h1 style="color: #007bff"><button class="add-to-cart" onclick="goToAfang()"><script>
+    function goToAfang(){
+        window.location.href= 'AfangSoup.html'
+    }
+</script></button>Details</h1>
 </li></div>
 
 <p><li style="float: left; margin-right: 20px;"></p>
@@ -59,7 +81,11 @@
 <p><h2 style="color: #007bff">Ogbonno Soup </p></h2>
 <p><h2 style="color: #007bff"> ₦2,000.00 </h2></p>
 <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-    <h1 style="color: #007bff"><a style="color: #007bff" href="Ogbonno.html">Details</a></h1>
+    <h1 style="color: #007bff"><button class="add-to-cart" onclick="goToOgbonno()"><script>
+    function goToOgbonno(){
+        window.location.href= 'Ogbonno.html'
+    }
+</script></button>Details</h1>
 </li></div>
 
 
@@ -69,7 +95,11 @@
 <p><h2 style="color: #007bff">White Soup </p></h2>
 <p><h2 style="color: #007bff"> ₦1,500.00 </h2></p>
 <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-    <h1 style="color: #007bff"><a style="color: #007bff" href="WhiteSoup.html">Details</a></h1>
+    <h1 style="color: #007bff"><button class="add-to-cart" onclick="goToWhiteSoup()"><script>
+    function goToWhiteSoup(){
+        window.location.href= 'WhiteSoup.html'
+    }
+</script></button>Details</h1>
 </li></div>
 
 <p><li style="float: left; margin-right: 20px;"></p>
@@ -78,7 +108,11 @@
 <p><h2 style="color: #007bff">Bitter Leaf Soup </p></h2>
 <p><h2 style="color: #007bff"> ₦1,500.00 </h2></p>
 <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-    <h1 style="color: #007bff"><a style="color: #007bff" href="BitterLeaf.html">Details</a></h1>
+    <h1 style="color: #007bff"><button class="add-to-cart" onclick="goToBitterLeaf()"><script>
+    function goToBitterLeaf(){
+        window.location.href= 'BitterLeaf.html'
+    }
+</script></button>Details</h1>
 </li></div>
 
 <p><li style="float: left; margin-right: 20px;"></p>
@@ -87,7 +121,11 @@
 <p><h2 style="color: #007bff">Vegetable Soup </p></h2>
 <p><h2 style="color: #007bff"> ₦1,000.00 </h2></p>
 <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-    <h1 style="color: #007bff"><a style="color: #007bff" href="Vegetable.html">Details</a></h1>
+    <h1 style="color: #007bff"><button class="add-to-cart" onclick="goToVegetableSoup()"><script>
+    function goToVegetableSoup(){
+        window.location.href= 'Vegetable.html'
+    }
+</script></button>Details</h1>
 </li></div>
 
 
