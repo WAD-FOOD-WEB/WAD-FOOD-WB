@@ -13,7 +13,7 @@ window.onclick = function(event) {
             }
         }
     }
-}
+} 
 
 
 
@@ -25,7 +25,6 @@ function addToCart(element) {
 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Check if item already exists in the cart
     const existingItem = cart.find(item => item.id === id);
     if (existingItem) {
         existingItem.quantity += 1;

@@ -10,18 +10,71 @@
 <h1> CONTACT ME </h1>
 
 <div class="header-buttons">
-  <h2><a href="Snack.html">Snack Menu</a></h2>
-  <h2> <a href="Soup.html">Soups Menu</a></h2>
- <h2> <a href="index.html">Home</a></h2>
-<button class="go-to-cart" onclick="goToCart()">Go to Cart</button>  
-</div>
+        
+  <fieldset>
+      <legend></legend>
+      
+      <img style="float: left; margin-right: 10px; margin-bottom: 0px;" class="logo-image" src="logo.png"alt="food image" width="200" >
+      <h2> <button style="float: left" class="header-button" onclick="goHome()">Home</button></h2>
+      <h2><button style="float: left" class="go-to-cart" onclick="goToCart()">Go to Cart</button>  </h2>
+      <h2><button style="float: left" class="header-button" onclick="goToSnack()" >Snack Menu</button></h2>
+      <h2> <button style="float: left" class="header-button" onclick="goToSoup()" >Soups Menu</button></h2>   
+    
+  </div>
+</fieldset>
 
 
 
 
 
+<form class="contact-form">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
 
-<h1>In order to contact us. Send a message to the following phone number: 08099430343</h1>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="10" cols="100" required></textarea>
+
+  <button type="submit">Send Message</button>
+  </form>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+  publicKey: "0bV0nGc60YdArm6YR",
+});
+})();
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    
+    // Convert FormData to an object
+    const templateParams = {
+      to_email: 'obieanidavid20@gmail.com',
+        from_name: formData.get('name'),
+        from_email: formData.get('email'),
+        message: formData.get('message')
+    };
+
+    emailjs.send("service_i4u6uw4", "template_m1w88kc", templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+
+
+
+ window.location.href = 'Thanks.html';
+         }, function(error) {
+            
+            console.log('FAILED...', error);
+        })
+  })
+</script>
+
 
 
 
