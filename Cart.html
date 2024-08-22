@@ -127,7 +127,7 @@ function goHome(){
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
     // Clear the cart data from localStorage
     if (cart.length === 0){
-        alert("You don't have any item in your cart. Browse and add items to your cart to checkout.");
+        alert("You don't have any item(s) in your cart. Browse and add items to your cart to checkout.");
                 window.location.href = "index.html"
                 return; 
     }
@@ -167,7 +167,7 @@ function goHome(){
             
             if (confirmation) {
                 alert("Proceeding to checkout!");
-                window.location.href = "note.html"; 
+                window.location.href = "Note.html"; 
                 renderCart(); 
             } else {
                 alert("Checkout canceled. You can continue shopping.");
